@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Redirect</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Für iOS
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://erzui.github.io/kin_ios/";  // iOS-Zielseite
+            }
+            // Für Android
+            else if (/android/i.test(userAgent)) {
+                window.location.href = "https://erzui.github.io/kin_web/";  // Android-Zielseite
+            }
+            // Standardseite für andere Geräte
+            else {
+                window.location.href = "https://erzui.github.io/kin_ios/";  // Alternative Seite
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>Du wirst entsprechend deines Geräts weitergeleitet...</p>
+</body>
+</html>
