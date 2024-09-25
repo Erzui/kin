@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Device Redirect</title>
+    <title>Gerätebasierte Weiterleitung</title>
     <script type="text/javascript">
         window.onload = function() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            // Für iOS
-            if (/iPad|iPhone|iPod/.test(userAgent)) {
-                window.location.href = "https://erzui.github.io/kin_ios/";  // iOS-Zielseite
+            // Überprüfen, ob das Gerät ein iOS-Gerät ist (iPhone, iPad, iPod)
+            if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                window.location.href = "https://erzui.github.io/kin_ios/";  // Ersetze durch deinen iOS-Link
             }
-            // Für Android
-            else if (/android/i.test(userAgent)) {
-                window.location.href = "https://erzui.github.io/kin_web/";  // Android-Zielseite
+            // Überprüfen, ob das Gerät ein Android-Gerät ist
+            else if (/Android/i.test(userAgent)) {
+                window.location.href = "https://erzui.github.io/kin_web/";  // Ersetze durch deinen Android-Link
             }
-            // Standardseite für andere Geräte
+            // Andere Geräte (z.B. Desktop)
             else {
-                window.location.href = "https://erzui.github.io/kin_ios/";  // Alternative Seite
+                window.location.href = "https://erzui.github.io/kin_web/";  // Ersetze durch deinen Desktop-Link oder eine allgemeine URL
             }
         };
     </script>
 </head>
 <body>
-    <p>Du wirst entsprechend deines Geräts weitergeleitet...</p>
+    <p>Du wirst basierend auf deinem Gerät weitergeleitet...</p>
 </body>
 </html>
