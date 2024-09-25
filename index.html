@@ -9,7 +9,7 @@
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
             // Für iOS
-            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            if (/iPad|iPhone|iPod/.test(userAgent)) {
                 window.location.href = "https://erzui.github.io/kin_ios/";  // iOS-Zielseite
             }
             // Für Android
