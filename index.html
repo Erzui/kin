@@ -9,16 +9,16 @@
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
             // Überprüfen, ob das Gerät ein iOS-Gerät ist (iPhone, iPad, iPod)
-            if (/iPhone/i.test(userAgent) || /iPad/i.test(userAgent) || /iPod/i.test(userAgent)) {
-                window.location.href = "https://example.com/ios";  // Ersetze mit deinem iOS-Link
+            if (/iPhone|iPad|iPod/i.test(userAgent)) {
+                window.location.href = "https://erzui.github.io/kin_ios/";  // Ersetze durch deinen iOS-Link
             }
             // Überprüfen, ob das Gerät ein Android-Gerät ist
             else if (/Android/i.test(userAgent)) {
-                window.location.href = "https://example.com/android";  // Ersetze mit deinem Android-Link
+                window.location.href = "https://erzui.github.io/kin_web/";  // Ersetze durch deinen Android-Link
             }
-            // Falls weder Android noch iOS, leite auf eine Standardseite (z.B. Desktop)
+            // Andere Geräte (z.B. Desktop)
             else {
-                window.location.href = "https://example.com/desktop";  // Ersetze mit deinem Desktop-Link oder einer generischen URL
+                window.location.href = "https://erzui.github.io/kin_web/";  // Ersetze durch deinen Desktop-Link oder eine allgemeine URL
             }
         };
     </script>
