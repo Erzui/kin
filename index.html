@@ -13,7 +13,7 @@
                 window.location.href = "https://erzui.github.io/kin_web/";  //Android-Link
             }
 			// Überprüfen, ob es sich um einen Desktop-Browser handelt
-			 else if (/Windows/i.test(userAgent) || /Macintosh/i.test(userAgent) || /Linux/i.test(userAgent)) {
+			 else if (/Windows NT/i.test(userAgent) || /Macintosh/i.test(userAgent) || /Linux/i.test(userAgent)) {
                 window.location.href = "https://erzui.github.io/kin_web/";  //Desktop-Link
             // Falls weder Android noch Desktop-Browser, leite IOS Seite
             else {
