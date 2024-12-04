@@ -8,6 +8,8 @@
         window.onload = function() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 			
+			console.log("User-Agent:", userAgent); // Debug: Ausgabe des User-Agents
+			
             // Überprüfen, ob das Gerät ein Android-Gerät ist
 			if (/Android/i.test(userAgent)) {
                 window.location.href = "https://erzui.github.io/kin_web/";  //Android-Link
