@@ -7,19 +7,15 @@
     <script type="text/javascript">
         window.onload = function() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-            // Überprüfen, ob das Gerät ein iOS-Gerät ist (iPhone, iPad, iPod)
-            if (/iPhone/i.test(userAgent) || /iPad/i.test(userAgent) || /iPod/i.test(userAgent)) {
-                window.location.href = "https://erzui.github.io/kin_ios/";  //iOS-Link
-            }
+			
             // Überprüfen, ob das Gerät ein Android-Gerät ist
-            else if (/Android/i.test(userAgent)) {
+			if (/Android/i.test(userAgent)) {
                 window.location.href = "https://erzui.github.io/kin_web/";  //Android-Link
             }
 			// Überprüfen, ob es sich um einen Desktop-Browser handelt
 			 else if (/Windows/i.test(userAgent) || /Macintosh/i.test(userAgent) || /Linux/i.test(userAgent)) {
                 window.location.href = "https://erzui.github.io/kin_web/";  //Desktop-Link
-            // Falls weder Android noch iOS, leite auf eine Standardseite
+            // Falls weder Android noch Desktop-Browser, leite IOS Seite
             else {
                 window.location.href = "https://erzui.github.io/kin_ios/";  // Ersetze mit deinem Desktop-Link oder einer generischen URL
             }
